@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --DarkBlueDarkModeElements: hsl(209, 23%, 22%);
+  --VeryDarkBlueDarkModeBackground: hsl(207, 26%, 17%);
+  --VeryDarkBlueLightModeText: hsl(200, 15%, 8%);
+  --DarkGrayLightModeInput: hsl(0, 0%, 52%);
+  --VeryLightGrayLightModeBackground: hsl(0, 0%, 98%);
+  --WhiteDarkModeTextLightModeElements: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--VeryDarkBlueLightModeText);
+  font-size: 16px;
+  background-color: var(--VeryLightGrayLightModeBackground);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (prefers-color-sheme: dark) {
+  body {
+    --VeryLightGrayLightModeBackground: hsl(207, 26%, 17%);
+    --VeryDarkBlueLightModeText: hsl(0, 0%, 100%);
+    --WhiteDarkModeTextLightModeElements: hsl(209, 23%, 22%);
+  }
+}
+body.dark-mode {
+  --VeryLightGrayLightModeBackground: hsl(207, 26%, 17%);
+  --VeryDarkBlueLightModeText: hsl(0, 0%, 100%);
+  --WhiteDarkModeTextLightModeElements: hsl(209, 23%, 22%);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav {
+  padding: 20px 0;
+  background-color: var(--WhiteDarkModeTextLightModeElements);
+  box-shadow: 0 0 5px 1px rgba(7, 27, 56, 0.178);
+}
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-flex-title {
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+}
+.nav-flex .nav-btn {
+  background-color: inherit;
+  cursor: pointer;
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--VeryDarkBlueLightModeText);
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 15px;
+}
+.nav-flex .nav-btn:hover {
+  color: var(--VeryLightGrayLightModeBackground);
+  background-color: var(--VeryDarkBlueLightModeText);
+  border-radius: 4px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.178);
+  transition: all 300ms ease;
+}
+
+.header {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*.select{
+      border: none;
+      padding: 7.5px 20px;
+      outline: none;
+      text-align: start;
+      border-radius: 4px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 14px;
+      color: var(--DarkBlueDarkModeElements);
+      font-weight: 600;
+
+  }*/
+}
+.header .form i {
+  color: var(--DarkGrayLightModeInput);
+}
+.header .form .search {
+  box-shadow: 0 0 5px 1px rgba(7, 27, 56, 0.178);
+  border-radius: 4px;
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  background-color: var(--WhiteDarkModeTextLightModeElements);
+  background-image: url("../../src/search-solid.svg");
+  background-position: 10px 11px;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-left: 40px;
+  color: var(--DarkGrayLightModeInput);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: max-content;
+  padding-bottom: 20px;
+}
+.main .card {
+  width: 250px;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--WhiteDarkModeTextLightModeElements);
+  box-shadow: 0 0 5px 1px rgba(7, 27, 56, 0.178);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .card-flag {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+}
+.main .card-body {
+  width: 80%;
+  margin: 0px auto;
+  padding: 30px 0;
+}
+.main .card-body-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.main .card-body-info p {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.main .card-body-info p span {
+  font-weight: 400;
+}
+.main .card-body-info a {
+  display: inline-block;
+  padding: 10px 0px;
+  color: gray;
+  text-decoration: none;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 1px rgba(7, 27, 56, 0.178);
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: var(--WhiteDarkModeTextLightModeElements);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--DarkGrayLightModeInput) transparent transparent transparent;
+  transition: all 0.2s ease;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--DarkGrayLightModeInput) transparent;
+  top: 10px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: var(--DarkGrayLightModeInput);
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-color: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: var(--WhiteDarkModeTextLightModeElements);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: all 200ms ease;
+  margin-top: 8px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 1px rgba(7, 27, 56, 0.178);
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 13px;
+  }
+
+  .nav .nav-btn i {
+    font-size: 14px;
+  }
+  .nav .nav-btn .n-text {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+  }
+  .header .form {
+    width: 100%;
+  }
+  .header .form .search {
+    width: 100%;
+    font-size: 12px;
+    background-position: 10px 10px;
+    background-size: 16px;
+  }
+
+  .select-items div, .select-selected {
+    font-size: 12px;
+  }
+
+  .main {
+    justify-content: space-evenly;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
