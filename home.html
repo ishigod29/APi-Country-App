@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Paises del Mundo</title>
+    <!--STYLES CSS-->
+    <link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-flex container">
+            <h1 class="nav-title">Un lugar en el Universo?</h1>
+            <a href="#" class="nav-btn btn-dark" role="button"><i class="far fa-moon"></i> <span class="n-text">Dark Mode</span></a>
+        </div>
+    </nav>
+
+    <header class="header container">
+        <form class="form" id="form">
+            <input id="input-form" class="search" type="text" placeholder="Busca un pais...">
+        </form>
+        <div class="custom-select" style="width:200px;">
+            <select>
+              <option value="">Filtrar por Region</option>
+              <option value="">Todos</option>
+              <option value="Africa">Africa</option>
+              <option value="Americas">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europa</option>
+              <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+
+    </header>
+
+    <main class="main container">
+    </main>
+
+    <template id="template-card">
+        <article class="card">
+            <img class="card-flag" src="https://www.banderas-mundo.es/data/flags/w580/br.png" alt="">
+            <div class="card-body">
+                <h2 class="card-body-title">Australia</h2>
+                <div class="card-body-info">
+                    <p class="card-info-text">Poblacion: <span>82738378</span></p>
+                    <p class="card-info-text">Region: <span>Europa</span></p>
+                    <p class="card-info-text">Capital: <span>hbygfe</span></p>
+                    <a class="card-info-link" href="#">Mas Informacion</a>
+                </div>
+            </div>
+        </article>
+    </template>
+
+
+
+    <!--SCRIPTS JAVASCRIPT-->
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/select.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="https://kit.fontawesome.com/5ac96062ac.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
