@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 const fetchDataInfo = async()=>{
     try {
-        const res = await fetch("https://restcountries.eu/rest/v2/all")
+        const res = await fetch("https://restcountries.com/v2/all")
         const data = await res.json()
         const dataFilterInfo = data.filter(item=>item.name === params)
         //console.log(dataFilterInfo)
